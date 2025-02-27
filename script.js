@@ -11,8 +11,9 @@ button.addEventListener("click", ()=>{
     sideBar.classList.toggle("active", !isActive);
     background.classList.toggle("active", !isActive);
 
-    button.innerHTML = isActive ? "<i class='fa-solid fa-bars' ></i>" : "X";
+    button.innerHTML = isActive ? "<i class='fa-solid fa-bars' ></i>" : "<i class='fa-solid fa-x'></i>";
 
+    
 })
 
 background.addEventListener("click", () => {
