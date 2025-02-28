@@ -36,6 +36,7 @@ img {
 
 p{
     letter-spacing: 1px;
+    cursor:default;
 }
 
 a {
@@ -138,7 +139,7 @@ h1, h2, h3, h4, h5 {
 /* Header */
 header {
     background-color: transparent;
-    position: fixed;
+    position: sticky;
     width: 100%;
     height: 90px;
     top: 0;
@@ -448,14 +449,17 @@ header {
 
 .service-card:hover {
     transform: translateY(-10px);
-    box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+    box-shadow: 0 4px 30px #238bbf6b;
+    background-color: var(--primary-color);
+    color: #fff;
+
 }
 
 .service-icon {
     width: 70px;
     height: 70px;
     background-color: var(--primary-color);
-    color: white;
+    color: var(--light-color);
     border-radius: 50%;
     display: flex;
     align-items: center;
@@ -464,9 +468,18 @@ header {
     font-size: 30px;
 }
 
+.service-card:hover .service-icon{
+    background-color: var(--light-color);
+    color: var(--primary-color);
+} 
+
 .service-card h3 {
     margin-bottom: 15px;
 }
+
+.service-card:hover h3{
+    color: var(--light-color);
+} 
 
 
 
@@ -527,6 +540,14 @@ header {
 .differences-img{
     width: 40%;
     margin-left: 10px;
+
+}
+.differences-img img{
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    object-fit: cover;
+    transition: all 0.3s ease;
 }
 /* Depoimentos Section */
 .testimonials {
@@ -831,8 +852,8 @@ footer{
 .btn-whatsapp .tooltip-text {
     visibility: hidden;
     position: absolute;
-    width: 120px;
-    top: 8px;
+    width: 130px;
+    top: 0px;
     left: -144px;
     padding: 6px;
     border-radius: 8px;
