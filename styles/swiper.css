@@ -1,0 +1,57 @@
+.swiper {
+    width: 100%;
+    height: 100%;
+    box-shadow: 0 0 20px rgba(27, 26, 26, 0.267);
+}
+
+.swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.swiper {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+    color: #fff; /* Cor do texto */
+    width: 40px; /* Largura do botão */
+    height: 40px; /* Altura do botão */
+    display: flex; /* Usar flexbox para centralizar o conteúdo */
+    align-items: center; /* Centralizar verticalmente */
+    justify-content: center; /* Centralizar horizontalmente */
+    background-color: rgba(0, 0, 0, 0.5); /* Fundo semi-transparente */
+    border-radius: 50%; /* Bordas arredondadas */
+    transition: background-color 0.3s; /* Transição suave para a cor de fundo */
+}
+
+/* Estilo para o ícone dos botões */
+.swiper-button-prev::after,
+.swiper-button-next::after {
+    font-size: 20px; /* Tamanho do ícone */
+    font-weight: 700;
+    font-family: "Poppins", serif; /* Fonte do ícone */
+}
+
+/* Estilo específico para o botão anterior */
+.swiper-button-prev::after {
+    content: '<'; /* Ícone ou texto para o botão anterior */
+}
+
+/* Estilo específico para o botão próximo */
+.swiper-button-next::after {
+    content: '>'; /* Ícone ou texto para o botão próximo */
+}
