@@ -273,7 +273,7 @@ header {
 
 .hero-content .carousel{
     width: 40%;
-    height: 80%;
+    height: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -480,6 +480,77 @@ header {
 .service-card:hover h3{
     color: var(--light-color);
 } 
+
+
+/*neuropsychological-assessment*/
+.neuropsychological-assessment{
+    background-color: var(--light-color);
+    padding: 50px 0;
+    margin: 0px auto;
+    width: 100%;
+    height: 70%;
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    border-radius: 10px;
+}
+
+.neuropsychological-texts{
+    display: flex;
+    align-items: start;
+    justify-content: center;
+    gap: 20px;
+    flex-direction: row;
+    max-width: 100%;
+    margin: 30px auto;
+}
+
+.neuropsychological-texts .left-texts{
+    display: flex;
+    align-items: start;
+    justify-content: left;
+    text-align: left;
+    gap: 20px;
+    flex-direction: column;
+    width: 50%;
+    height: 100%;
+}
+
+.neuropsychological-texts .left-texts h2{
+    color: var(--secondary-color);
+    text-align: left;
+    margin: 0;
+}
+.neuropsychological-texts .left-texts h2:after{
+    margin-left: 0%;
+}
+.neuropsychological-texts .right-texts{
+    display: flex;
+    align-items: start;
+    justify-content: right;
+    text-align: left;
+    gap: 20px;
+    flex-direction: column;
+    width: 50%;
+    height: 100%;
+}
+.neuropsychological-texts .right-texts ul{
+    display: flex;
+    align-items: start;
+    justify-content: left;
+    text-align: left;
+    gap: 5px;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    list-style: url('../assets/icone-front.svg');
+}
+.neuropsychological-texts .right-texts ul li{
+    color: var(--secondary-color);
+    text-align: left;
+    margin: 0;
+    font-weight: 600;
+}
 
 
 
