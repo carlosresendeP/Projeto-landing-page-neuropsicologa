@@ -6,6 +6,7 @@
     --dark-color: #333;
     --accent-color: #8eccea;
     --hover-color: #175e81;
+    --greenColor: #76a04e;
 
     --primaryOrange:#D17547;
     --font-main: "Poppins", serif;
@@ -101,7 +102,7 @@ h1, h2, h3, h4, h5 {
     text-align: center;
     transition: width 0.2s linear, height 0.2s linear;
     z-index: -1;
-    background-color:var(--secondary-color);
+    background-color:var(--primaryOrange);
 }
 
 .btn:hover {
@@ -507,8 +508,8 @@ header {
 
 .neuropsychological-texts .left-texts{
     display: flex;
-    align-items: start;
-    justify-content: left;
+    align-items:start;
+    justify-content: center;
     text-align: left;
     gap: 20px;
     flex-direction: column;
@@ -520,10 +521,19 @@ header {
     color: var(--secondary-color);
     text-align: left;
     margin: 0;
+    max-width: 1200px;
 }
 .neuropsychological-texts .left-texts h2:after{
     margin-left: 0%;
 }
+
+.neuropsychological-texts .left-texts .btn{
+    margin-top: 20px;
+}
+.neuropsychological-texts .right-texts .btn{
+    display: none;
+}
+
 .neuropsychological-texts .right-texts{
     display: flex;
     align-items: start;
@@ -552,6 +562,15 @@ header {
     font-weight: 600;
 }
 
+.neuropsychological-texts .right-texts h4{
+    text-align: left;
+    padding: 10px 15px;
+    background-color: var(--primary-color);
+    color: var(--light-color);
+    border-radius: 30px;
+
+    font-size: 16px;
+}
 
 
 /* differences container */
@@ -965,7 +984,7 @@ footer{
     top: 0px;
     width: 300px;
     height: 100%;
-    background: linear-gradient(to bottom, var(--primary-color), var(--secondary-color));
+    background: linear-gradient(to bottom, var(--primary-color), var(--hover-color));
     opacity: 1;
 
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.123);
@@ -1196,11 +1215,41 @@ footer{
         margin: 15px auto;
     }
 
+    .neuropsychological-texts{
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+    }
+    .neuropsychological-texts .left-texts{
+        width: 100%;
+    }
+    .neuropsychological-texts .left-texts .btn{
+        display: none;
+    }
+    .neuropsychological-texts .right-texts .btn{
+        display: flex;
+    }
+
+    .neuropsychological-texts .right-texts{
+        width: 100%;
+    }
+    .neuropsychological-texts .right-texts ul{
+        gap: 20px;
+    }
+
+    .neuropsychological-texts .right-texts h4{
+        text-align: left;
+        min-width: 33%;
+        margin: 20px 0;
+        font-size: 14px;
+    }
+
 }
 
 @media (max-width: 576px) {
     .section-title {
-        font-size: 1.8rem;
+        font-size: 1.2rem;
     }
     
     .testimonial-text {
