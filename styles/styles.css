@@ -588,6 +588,9 @@ header {
     margin: 0;
     font-weight: 600;
 }
+.neuropsychological-texts .right-texts ul a{
+    background-color: var(--primary-color);
+}
 
 .neuropsychological-texts .right-texts h4{
     text-align: left;
@@ -698,7 +701,7 @@ header {
     overflow: hidden;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
     flex-direction: column;
 }
 
@@ -1156,7 +1159,7 @@ footer{
     }
 
     .testimonials{
-        height: 100vh;
+        height: 80vh;
     }
 
     .testimonial-slide.active {
@@ -1366,8 +1369,12 @@ footer{
         height: 40px;
     }
 
-    .testimonial-slide.active {
+    .testimonials {
         height: 100%;
+    }
+
+    .testimonial-slide.active {
+        height: 320px;
     }
 
 
