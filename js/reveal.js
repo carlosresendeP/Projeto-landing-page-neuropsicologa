@@ -22,7 +22,7 @@ btn.forEach((item, index) => {
         distance: '50px',
         duration: 1000,
         delay: index * 200, // Delay de 100ms por item
-        reset: true
+        reset: false
     });
 });
 
