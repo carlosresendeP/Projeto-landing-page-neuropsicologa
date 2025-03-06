@@ -40,7 +40,7 @@ const scrollDown200 = ScrollReveal().reveal('.section-title',{
     distance: '50px', // Distância do movimento
     duration: 1000, // Duração da animação em milissegundos
     delay: 200, // Delay entre as animações
-    reset: true // Não reseta a animação quando o elemento sai da tela
+    reset: false // Não reseta a animação quando o elemento sai da tela
 })
 
 const scrollleft300 = ScrollReveal().reveal('.about-text h2',{
