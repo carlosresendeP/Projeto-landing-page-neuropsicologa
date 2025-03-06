@@ -600,6 +600,10 @@ header {
 
     font-size: 16px;
 }
+
+.neuropsychological-texts .btn{
+    width: 90%;
+}
 /*neuro-assessment*/
 
 .neuro-assessment {
@@ -694,7 +698,9 @@ header {
     color: var(--light-color);
 }
 
-
+.neuro-assessment .btn{
+    width: 90%;
+}
 
 
 
