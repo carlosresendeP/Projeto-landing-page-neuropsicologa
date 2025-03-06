@@ -58,12 +58,33 @@ const scrollDown500 = ScrollReveal().reveal('.about-text p',{
     delay: 500, // Delay entre as animações
     reset: false // Não reseta a animação quando o elemento sai da tela
 })
-const scrollleft500 = ScrollReveal().reveal('.about-img',{
+const scaleImgleft = ScrollReveal().reveal('.about-img',{
     origin: 'left', 
-    distance: '50px', // Distância do movimento
-    duration: 1000, // Duração da animação em milissegundos
-    delay: 500, // Delay entre as animações
-    reset:true
+    distance: '50px', 
+    duration: 1000,
+    scale: 1.1, 
+    delay: 500, 
+    reset:false
+})
+
+const scaleImg = ScrollReveal().reveal('.image-wrapper',{
+    origin: 'left', 
+    distance: '50px',
+    duration: 1000, 
+    delay: 400,
+    scale: 0.8,
+    reset: false
+
+})
+
+const scaleImgright = ScrollReveal().reveal('.differences-img',{
+    origin: 'right', 
+    distance: '50px',
+    duration: 1000, 
+    delay: 400,
+    scale: 1.1,
+    reset: false
+
 })
 
 const h4400 = ScrollReveal().reveal('.neuropsychological-texts h4',{
@@ -146,7 +167,7 @@ items.forEach((item, index) => {
     });
 });
 
-const socialLinks = document.querySelectorAll('.social-links a');
+const socialLinks = document.querySelectorAll('a');
 items.forEach((item, index) => {
     ScrollReveal().reveal(item, {
         origin: 'left',

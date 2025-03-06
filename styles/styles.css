@@ -318,7 +318,6 @@ header {
     text-shadow: 0px 0px 50px #ffffff79;
     font-family: var(--font-heading);
     font-weight: 700;
-    text-transform: capitalize;
     font-style: italic;
 }
 .highlight{
@@ -601,6 +600,103 @@ header {
 
     font-size: 16px;
 }
+/*neuro-assessment*/
+
+.neuro-assessment {
+    background: linear-gradient(135deg, #fff, var(--light-color));
+    padding: 80px 20px;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    color: #fff;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+.neuro-assessment .section-title {
+    margin-bottom: 25px;
+    color: var(--secondary-color);
+}
+
+.neuro-assessment .container{
+    height: 100%;
+}
+
+.neuro-assessment .neuro-content{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    gap: 20px;
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 20px 0;
+    position: relative;
+}
+
+.neuro-assessment .image-wrapper {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 25px;
+    overflow: hidden;
+    border-radius: 15px;
+    width: 50%;
+    height: 100%;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.11);
+}
+.neuro-assessment .highlight-image {
+    width: 100%;
+    height: 100%;
+    height: auto;
+    border-radius: 15px;
+    transition: transform 0.3s ease-in-out;
+
+}
+.neuro-assessment .highlight-image:hover {
+    transform: scale(1.05);
+}
+
+.neuro-assessment ul{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    flex-direction: column;
+    width: 50%;
+    margin: 0 auto;
+    padding: 20px 015px;
+}
+.neuro-assessment ul li{
+    list-style: url('../assets/icone-front.svg');
+    list-style: none;
+}
+
+.neuro-assessment .paragraph {
+    font-size: 20px;
+    margin-bottom: 20px;
+    max-width: 700px;
+    line-height: 1.6;
+    color: var(--secondary-color);
+    text-align: center;
+    font-weight: 400;
+    background: transparent;
+    padding: 10px 25px;
+    box-shadow: 0 0 10px #238bbf49;
+    border-radius: 20px;
+    transition: all 0.4s linear;
+}
+
+.neuro-assessment .paragraph:hover{
+    background: var(--primary-color);
+    color: var(--light-color);
+}
+
+
+
+
 
 
 /* differences container */
@@ -728,10 +824,11 @@ header {
     font-size: 20px;
     margin-bottom: 20px;
     position: relative;
-    color: var(--primary-color);
+    color: var(--secondary-color);
     font-weight: 300;
     letter-spacing: 0.4px;
     padding: 10px;
+    font-weight: 300;
 }
 
 /*.testimonial-text:before {
@@ -836,9 +933,75 @@ header {
     color: var(--light-color)
 }
 
+/*instagram-section*/
 
+.instagram-section{
+    background: linear-gradient(to right, var(--accent-color), var(--primary-color));
+    padding: 20px 0;
+    margin: 50px auto;
+    width: 100%;
+    height: 40%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 
+.instagram-section .section-title{
+    margin: 0;
+    font-size: 25px;
+    color: var(--light-color);
+}
 
+.instagram-section .container{
+    height: 100%;
+}
+
+.instagram-section .instagram-content{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    flex-direction: column;
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 20px 0;
+}
+
+.instagram-section .instagram-content p{
+    color: var(--light-color);
+    font-size: 15px;
+    text-align: center;
+}
+.instagram-section .instagram-content .instagram-profile{
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+
+}
+.instagram-section .instagram-content .instagram-profile img{
+    width: 100%;
+    height:100%;
+    border-radius: 50%;
+    object-fit: cover;
+    transition: all 0.3s ease;
+    border: 1px solid var(--hover-color);
+}
+
+.instagram-section .btn::after{
+    width: 100%;
+    height: 0%;
+    transition: box-shadow linear 2s;
+}
+
+.instagram-section .btn::after{
+    background: linear-gradient(to right,#580ece,#b80ece,#e78f2b );
+    box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.356);
+}
+.instagram-section .btn:hover::after{
+    width: 100%;
+    height: 100%;
+    transition: width 0.4s linear, height 0.4s linear;
+}
 
 
 /* Contato Section */
@@ -1348,6 +1511,23 @@ footer{
     }
     .testimonial-author {
         font-size: 14px;
+    }
+
+    .neuro-assessment .neuro-content{
+        flex-direction: column;
+        gap: 20px;
+    }
+    .neuro-assessment .image-wrapper {
+        width: 70%;
+    }
+    .neuro-assessment ul{
+        width: 100%;
+    }
+    .neuro-assessment .paragraph{
+        font-size: 17px;
+        max-width: 100%;
+        height: 200%;
+        padding: 25px 25px;
     }
 
 }
