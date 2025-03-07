@@ -333,6 +333,7 @@ header {
     margin-bottom: 30px;
     color: var(--secondary-color);
     text-shadow: 0px 0px 50px #ffffff79;
+    max-width: 90%;
 }
 
 
@@ -575,7 +576,7 @@ header {
     align-items: start;
     justify-content: left;
     text-align: left;
-    gap: 5px;
+    gap: 15px;
     flex-direction: column;
     width: 100%;
     height: 100%;
@@ -699,7 +700,7 @@ header {
 }
 
 .neuro-assessment .btn{
-    width: 90%;
+    max-width: 90%;
 }
 
 
@@ -793,6 +794,22 @@ header {
 }
 .testimonials .container{
     height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.testimonials p{
+    color: var(--secondary-color);
+    font-size: 15px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.testimonials p:nth-child(2){
+    font-size: 17px;
+
 }
 
 .testimonials-slider {
@@ -809,9 +826,11 @@ header {
 
 .testimonial-slide {
     text-align: center;
-    width: 100%;
+    width: 40%;
+    height: 100%;
     padding: 20px;
     display: none;
+    background-color: #f3efef;
 }
 
 .testimonial-slide.active {
@@ -819,15 +838,15 @@ header {
     align-items: center;
     justify-content: space-around;
     flex-direction: column;
-    width: 100%;
-    height: 80%;
+    width: 80%;
+    height: 100%;
     border-radius: 10px;
     padding: 20px 30px;
 }
 
 .testimonial-text {
     font-style: italic;
-    font-size: 20px;
+    font-size: 18px;
     margin-bottom: 20px;
     position: relative;
     color: var(--secondary-color);
@@ -835,6 +854,7 @@ header {
     letter-spacing: 0.4px;
     padding: 10px;
     font-weight: 300;
+
 }
 
 /*.testimonial-text:before {
@@ -849,13 +869,13 @@ header {
 
 
 .testimonial-author {
-    font-size: 20px;
+    font-size: 15px;
     font-weight: 600;
     background: linear-gradient(to left, var(--primary-color), var(--hover-color));
     color: var(--light-color);
     text-shadow: 0 0 10px rgba(0,0,0,0.1);
     padding: 5px 20px;
-    border-radius: 5px;
+    border-radius: 10px;
 }
 
 .testimonial-nav {
@@ -1518,6 +1538,12 @@ footer{
     .testimonial-author {
         font-size: 14px;
     }
+
+    .testimonials p{
+
+        font-size: 13px;
+    }
+    
 
     .neuro-assessment .neuro-content{
         flex-direction: column;
