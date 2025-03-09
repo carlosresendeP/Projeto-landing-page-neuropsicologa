@@ -31,3 +31,26 @@ background.addEventListener("click", () => {
 const yeardate = document.querySelector(".date")
 
 yeardate.innerHTML = new Date().getFullYear()
+
+
+
+/*FAQ*/
+
+document.addEventListener('DOMContentLoaded', function() {
+    const faqItems = document.querySelectorAll('.faq-item');
+    const faqAnswers = document.querySelectorAll('.faq-answer');
+
+    faqItems.forEach((item, index) => {
+        item.addEventListener('click', () => {
+            faqItems.forEach((activeItem, activeIndex) => {
+                if (activeIndex !== index) {
+                    activeItem.classList.remove('active');
+                    faqAnswers[activeIndex].classList.remove('active');
+                    
+                }
+            });
+            item.classList.toggle('active'); // Adiciona ou remove a classe 'active' do item clicado
+            faqAnswers[index].classList.toggle('active'); // Adiciona ou remove a classe 'active' da resposta correspondente
+        });
+    });
+});

@@ -14,6 +14,9 @@
     --font-heading:"Montserrat", serif;
     --font-Detals:"Sour Gummy", sans-serif;
 
+    --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    --transition: all 0.3s ease;
+
     /*#e75a18, #D17547,#76a04e,#b82454 */
 }
 
@@ -258,7 +261,7 @@ header {
 }
 
 .hero-content {
-    width: 1200px;
+    width: 100%;
     margin: 0 auto;
     display: flex;
     align-items: center;
@@ -274,15 +277,16 @@ header {
 .hero-text{
     display:flex;
     flex-direction: column;
-    align-items: start;
-    justify-content: flex-start;
-    text-align: left;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
     z-index: 100;
     left: 0;
-    max-width: 60%;
+    width: 100%;
 
 }
 
+/*desativado*/
 .hero-content .carousel{
     width: 40%;
     height: 100%;
@@ -295,21 +299,9 @@ header {
 
 }
 
-/*.hero .hero-img{
-    position: absolute;
-    top:0;
-    width: 100%;
-    z-index: 1;
-    left: 0;
-
-}
-.hero .hero-img img{
-    width: 100%;
-    object-fit: cover;
-}*/
 
 .hero h1 {
-    font-size: 3rem;
+    font-size:50px;
     margin-bottom: 20px;
     background: linear-gradient(to right, var(--primary-color), var(--hover-color));
     -webkit-background-clip: text;
@@ -319,6 +311,7 @@ header {
     font-family: var(--font-heading);
     font-weight: 700;
     font-style: italic;
+    width: 100%;
 }
 .highlight{
     background: linear-gradient(to right, var(--primaryOrange), var(--secundaryOrange));
@@ -436,6 +429,15 @@ header {
     flex-direction: column;
 }
 
+.about-text h3{
+    background-color: var(--light-color);
+    padding: 10px 20px;
+    color: var(--primary-color);
+    border-radius: 5px;
+    font-weight: 600;
+    font-size: 20px;
+}
+
 .about-text .btn {
     margin-top: 20px;
 }
@@ -462,7 +464,7 @@ header {
 } 
 
 
-/* Serviços Section */
+/* Serviços Section 
 .services-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -511,7 +513,7 @@ header {
 .service-card:hover h3{
     color: var(--light-color);
 } 
-
+*/
 
 /*neuropsychological-assessment*/
 .neuropsychological-assessment{
@@ -531,8 +533,8 @@ header {
     align-items: start;
     justify-content: center;
     gap: 20px;
-    flex-direction: row;
-    max-width: 100%;
+    flex-direction: column;
+    width: 100%;
     margin: 30px auto;
 }
 
@@ -543,7 +545,7 @@ header {
     text-align: left;
     gap: 20px;
     flex-direction: column;
-    width: 50%;
+    width: 100%;
     height: 100%;
 }
 
@@ -557,7 +559,7 @@ header {
     margin-left: 0%;
 }
 
-.neuropsychological-texts .left-texts .btn{
+.neuropsychological-texts .btn{
     margin-top: 20px;
     text-align: center;
     width: auto;
@@ -565,54 +567,67 @@ header {
     align-items: center;
     justify-content: center;
 }
-.neuropsychological-texts .right-texts .btn{
-    display: none;
+
+.neuropsychological-texts .avaliation-cards{
+    display: grid;
+    grid-template-columns: repeat(3, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 30px;
+
 }
 
-.neuropsychological-texts .right-texts{
-    display: flex;
-    align-items: start;
-    justify-content: right;
-    text-align: left;
-    gap: 20px;
-    flex-direction: column;
-    width: 50%;
-    height: 100%;
+.neuropsychological-texts .card {
+    background-color: var(--white);
+    border-radius: 10px;
+    padding: 30px;
+    box-shadow: var(--shadow);
+    transition: var(--transition);
 }
-.neuropsychological-texts .right-texts ul{
-    display: flex;
-    align-items: start;
-    justify-content: left;
-    text-align: left;
-    gap: 15px;
-    flex-direction: column;
-    width: 100%;
-    height: 100%;
-    list-style: url('../assets/icone-front.svg');
+
+.neuropsychological-texts .card:hover {
+    transform: translateY(-10px);
+    box-shadow: 1px 2px 30px #238bbf63;
 }
-.neuropsychological-texts .right-texts ul li{
-    color: var(--secondary-color);
-    text-align: left;
-    margin: 0;
+
+.neuropsychological-texts .card-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+    color: var(--primary);
+    margin-bottom: 20px;
+    background: linear-gradient(to right, var(--primary-color), var(--hover-color));
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    color: var(--light-color);
+}
+
+.neuropsychological-texts.card h3 {
+    font-size: 25px;
+    margin-bottom: 15px;
     font-weight: 600;
 }
-.neuropsychological-texts .right-texts ul a{
-    background-color: var(--primary-color);
+.neuropsychological-assessment ul{
+    display: flex;
+    align-items: start;
+    justify-content: center;
+    gap: 20px;
+    flex-direction: column;
+    margin: 0 auto;
+    padding: 20px 015px;
+}
+.neuropsychological-assessment ul li{
+    list-style: url('../assets/icone-front.svg');
+    font-weight: 500;
+    color: var(--secondary-color);
 }
 
-.neuropsychological-texts .right-texts h4{
-    text-align: left;
-    padding: 10px 15px;
-    background-color: var(--primary-color);
-    color: var(--light-color);
-    border-radius: 15px;
-    margin-left: 25px;
-    font-size: 16px;
-}
 
-.neuropsychological-texts .btn{
-    width: 90%;
-}
+
+
+
+
 /*neuro-assessment*/
 
 .neuro-assessment {
@@ -711,6 +726,87 @@ header {
     max-width: 90%;
 }
 
+
+/* Processo Section */
+.process {
+    background-color: #fff;
+    margin: 0;
+    padding: 0;
+    padding-top: 80px;
+}
+
+
+
+
+.timeline {
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 80px 0;
+}
+.timeline h3 span{
+    color: var(--primary-color);
+}
+
+.timeline::after {
+    content: '';
+    position: absolute;
+    width: 4px;
+    height: 100%;
+    background: linear-gradient( to bottom, var(--accent-color), var(--hover-color));
+    top: 0px;
+    bottom: 0;
+    left: 50%;
+    margin-left: 0px;
+    margin-right: 0px;
+}
+
+.timeline-item {
+    padding: 10px 40px;
+    position: relative;
+    width: 50%;
+    box-sizing: border-box;
+}
+
+.timeline-item:nth-child(odd) {
+    left: 0;
+}
+
+.timeline-item:nth-child(even) {
+    left: 50%;
+}
+
+.timeline-item::after {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-color: var(--light-color);
+    border: 4px solid var(--primary-color);
+    top: 15px;;
+    border-radius: 50%;
+    z-index: 1;
+}
+
+.timeline-item:nth-child(odd)::after {
+    right: -12px;
+}
+
+.timeline-item:nth-child(even)::after {
+    left: -8px;
+}
+
+.timeline-content {
+    padding: 20px;
+    background-color: var(--light-color);
+    border-radius: 10px;
+    box-shadow: var(--shadow);
+}
+
+.timeline-content h3 {
+    margin-top: 0;
+    color: var(--secondary-color);
+}
 
 
 
@@ -929,7 +1025,7 @@ header {
 
 
 
-/*history*/
+/*history
 .history{
     background-color:var(--light-color);
     padding: 20px 0;
@@ -982,59 +1078,184 @@ header {
     background-color:var(--secondary-color);
     color: var(--light-color)
 }
+*/
+
+
+    /* FAQ Section */
+    .faq-container {
+        max-width: 800px;
+        margin: 0 auto;
+    }
+
+    .faq-item {
+        margin-bottom: 20px;
+        border-radius: 10px;
+        overflow: hidden;
+        box-shadow: var(--shadow);
+        transition: all 0.3s ease;
+    }
+
+    .faq-question {
+        padding: 20px;
+        background-color: var(--light-color);
+        cursor: pointer;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-weight: 600;
+        transition: var(--transition);
+    }
+
+    .faq-question:hover{
+        background-color: var(--primary-color);
+        color: var(--light-color);
+    }
+    
+
+    .faq-question::after {
+        content: '+';
+        font-size: 24px;
+        font-weight: 300;
+        transition: transform 0.4s ease;
+    }
+
+    
+    .faq-item.active .faq-question::after {
+        content: '−';
+        transform: rotate(180deg);
+    }
+
+    .faq-answer {
+        padding: 0 20px;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease;
+        background-color: var(--light-color);
+        line-height: 1.7;
+        font-size: 16px;
+        color: var(--secondary-color);
+    }
+
+
+    .faq-answer.active{
+        padding: 10px 20px;
+        max-height: 500px;
+    }
+
+    .faq-icon {
+        transition: var(--transition);
+    }
+
+    .faq-icon.rotate {
+        transform: rotate(180deg);
+    }
+
+
 
 /*instagram-section*/
 
 .instagram-section{
-    background: linear-gradient(to right, var(--accent-color), var(--primary-color));
-    padding: 20px 0;
-    margin: 50px auto;
     width: 100%;
-    height: 40%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    height: 100%;
+    padding: 80px 0;
+    background-color: #f9f9f9;
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(to bottom, var(--accent-color), var(--light-color));
 }
+/*.instagram-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 300px;
+    height: 300px;
+    background: radial-gradient(circle, rgba(193, 53, 132, 0.1) 0%, rgba(193, 53, 132, 0) 70%);
+    z-index: 0;
+}*/
 
 .instagram-section .section-title{
     margin: 0;
     font-size: 25px;
-    color: var(--light-color);
+    font-weight: 700;
+    text-align: center;
+    color: var(--secondary-color);
+    position: relative;
+}
+.instagram-section .section-title::after{
+    background: linear-gradient(45deg, #405DE6, #5851DB, #833AB4, #C13584, #E1306C, #FD1D1D);
 }
 
 .instagram-section .container{
     height: 100%;
 }
 
-.instagram-section .instagram-content{
+.instagram-section .instagram-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+}
+
+.instagram-profile {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 5px;
-    flex-direction: column;
-    max-width: 100%;
-    margin: 0 auto;
-    padding: 20px 0;
-}
-
-.instagram-section .instagram-content p{
-    color: var(--light-color);
-    font-size: 15px;
-    text-align: center;
-}
-.instagram-section .instagram-content .instagram-profile{
-    width: 80px;
-    height: 80px;
-    border-radius: 50%;
-
-}
-.instagram-section .instagram-content .instagram-profile img{
+    margin-bottom: 40px;
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+    padding: 30px;
     width: 100%;
-    height:100%;
+    max-width: 800px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.instagram-profile:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+}
+
+
+.instagram-profile .profile-image {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 30px;
+}
+
+.profile-image img {
+    width: 100px;
+    height: 100px;
     border-radius: 50%;
     object-fit: cover;
-    transition: all 0.3s ease;
-    border: 1px solid var(--hover-color);
+    border: 3px solid #fff;
+    box-shadow: 0 0 0 3px #C13584;
+}
+
+.profile-info {
+    flex: 1;
+}
+
+.profile-info h3 {
+    font-size: 20px;
+    font-weight: 600;
+    margin: 0 0 5px;
+    color: #222;
+}
+
+.profile-info .username {
+    font-size: 18px;
+    color: #C13584;
+    font-weight: 500;
+    margin: 0 0 15px;
+}
+
+.profile-info .bio {
+    font-size: 15px;
+    line-height: 1.6;
+    color: var(--secondary-color);
+    margin: 0;
 }
 
 .instagram-section .btn::after{
@@ -1305,8 +1526,10 @@ footer{
     justify-content: center;
     flex-direction: column;
     height: 100%;
-    margin: 20px auto;
+    margin: 70px 0;
+    padding: 20px 0;
     gap: 20px;
+    text-align: center;
 }
 
 .navbar-mobile div .social-links{
@@ -1314,7 +1537,7 @@ footer{
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 100%;
+
 }
 
 .navbar-mobile .nav-links-mobile li a{
@@ -1381,6 +1604,50 @@ footer{
     .testimonial-slide.active {
         width: 90%;
         height: 70%;
+    }
+
+    .neuropsychological-texts{
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .neuropsychological-texts .avaliation-cards{
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    }
+
+    .timeline::after {
+        left: 31px;
+    }
+
+    .timeline-item {
+        width: 100%;
+        padding-left: 70px;
+        padding-right: 0;
+    }
+
+    .timeline-item:nth-child(even) {
+        left: 0;
+    }
+
+    .timeline-item:nth-child(odd)::after,
+    .timeline-item:nth-child(even)::after {
+        left: 21px;
+    }
+
+    .instagram-profile {
+        flex-direction: column;
+        text-align: center;
+        padding: 25px;
+    }
+    
+    .instagram-profile .profile-image {
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+    
+    .section-title {
+        font-size: 2rem;
     }
 
 }
@@ -1534,31 +1801,6 @@ footer{
     .neuropsychological-texts .left-texts{
         width: 100%;
     }
-    .neuropsychological-texts .left-texts .btn{
-        display: none;
-    }
-    .neuropsychological-texts .right-texts .btn{
-        margin-top: 20px;
-        text-align: center;
-        width: auto;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-
-    .neuropsychological-texts .right-texts{
-        width: 100%;
-    }
-    .neuropsychological-texts .right-texts ul{
-        gap: 20px;
-    }
-
-    .neuropsychological-texts .right-texts h4{
-        text-align: left;
-        min-width: 33%;
-        margin: 20px 0;
-        font-size: 14px;
-    }
 
 
     .testimonial-slide.active {
@@ -1595,6 +1837,52 @@ footer{
         height: 200%;
         padding: 25px 25px;
     }
+
+    .process {
+
+        padding: 0;
+        padding-top: 80px;
+    }
+
+    .faq-title {
+        font-size: 28px;
+    }
+    
+    .faq-question {
+        font-size: 16px;
+        padding: 15px;
+    }
+    
+    .faq-item.active .faq-answer {
+        padding: 15px;
+    }
+    .instagram-section {
+        padding: 60px 0;
+    }
+    
+    .profile-image img {
+        width: 100px;
+        height: 100px;
+    }
+    
+    .profile-info h3 {
+        font-size: 1.5rem;
+    }
+    
+    .profile-info .username {
+        font-size: 1rem;
+    }
+    
+    .instagram-btn {
+        padding: 12px 24px;
+        font-size: 0.95rem;
+    }
+    
+    .section-title {
+        font-size: 1.8rem;
+        margin-bottom: 30px;
+    }
+
 
 }
 

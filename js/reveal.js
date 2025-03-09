@@ -96,7 +96,7 @@ const h4400 = ScrollReveal().reveal('.neuropsychological-texts h4',{
 
 })
 
-const itemsCard = document.querySelectorAll('.services-grid .service-card');
+const itemsCard = document.querySelectorAll('.avaliation-cards .card');
 itemsCard.forEach((item, index) => {
     ScrollReveal().reveal(item, {
         origin: 'top',
@@ -175,5 +175,28 @@ items.forEach((item, index) => {
         duration: 1000,
         delay: index * 100, // Delay de 100ms por item
         reset: false
+    });
+});
+
+
+const timelineItembotton = document.querySelectorAll('.timeline-content');
+items.forEach((item, index) => {
+    ScrollReveal().reveal(item, {
+        origin: 'botton',
+        distance: '50px',
+        duration: 1000,
+        delay: index * 100, // Delay de 100ms por item
+        reset: true
+    });
+});
+
+const faqItems = document.querySelectorAll('faq-item');
+items.forEach((item, index) => {
+    ScrollReveal().reveal(item, {
+        origin: 'botton',
+        distance: '50px',
+        duration: 1000,
+        delay: index * 100, // Delay de 100ms por item
+        reset: true
     });
 });
